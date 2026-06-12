@@ -15,8 +15,7 @@ if (packageJson.version !== manifest.version) {
 }
 
 if (tag) {
-  const tagVersion = tag.startsWith("v") ? tag.slice(1) : tag;
-  if (tagVersion !== manifest.version) {
+  if (tag !== manifest.version) {
     throw new Error(
       `Tag mismatch: tag=${tag}, extension version=${manifest.version}`
     );
